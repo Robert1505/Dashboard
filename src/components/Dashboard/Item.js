@@ -1,10 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import {deleteItem,updateItem} from '../../actions';
 
 function Item({lab, p, category, deleteItem, updateItem}) {
     const [label, setLabel] = useState(lab);
     const [price, setPrice] = useState(p);
+    useEffect(() => {
+        setLabel(lab);
+        setPrice(p);
+    }, [lab, p]);
     return (
         <div className = "list-item">
                     <div className = "flex justify-between">
