@@ -28,12 +28,12 @@ function Dashboard(props) {
         <Title title = "Dashboard" />
         <InputField />
         <div className="flex justify-around mt-12">{renderCards()}</div>
-        <div>
-        <Link to = "/">
-          <button >
-            Home
-          </button>
-        </Link>
+        <div className = "text-center absolute inset-x-0 bottom-0 mb-8">
+          <Link to = "/">
+            <button className={`py-2 px-4 bg-purple-700 text-white rounded hover:bg-purple-600 border-2 border-black`}>
+              Home
+            </button>
+          </Link>
       </div>
       </div>
     </div>
